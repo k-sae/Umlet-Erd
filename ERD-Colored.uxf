@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>360</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>376</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>392</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>408</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>480</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0
+m2=0</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>504</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>520</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>536</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=[key]-&gt;
+m2=0..1
+m1=0..n
+</panel_attributes>
+    <additional_attributes>26.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>336</y>
+      <w>96</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+r1=professor
+m2=1..n
+r2=student
+teaches to v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>464</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+teaches to ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>424</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>448</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=3
+m2=1
+&lt; teaches to</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>392</x>
+      <y>136</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Atribute</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>344</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>288</x>
+      <y>112</y>
+      <w>81</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview
+Relation
+bg=green</panel_attributes>
+    <additional_attributes/>
+    <custom_code>height = 100;
+width = 100;
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+Polygon p = new Polygon();
+p.addPoint(width/2,0);
+p.addPoint(width, height/2);
+p.addPoint(width/2, height);
+p.addPoint(0, height/2);
+drawPolygon(p);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>400</x>
+      <y>40</y>
+      <w>97</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes>Weak Entity
+bg=orange</panel_attributes>
+    <additional_attributes/>
+    <custom_code>height = 50;
+width = 120;
+drawRectangle(0,0,width,height);
+drawRectangle(5,5,width - 10,height -10);
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>280</x>
+      <y>40</y>
+      <w>97</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes>Entity
+bg=blue</panel_attributes>
+    <additional_attributes/>
+    <custom_code>height = 50;
+width = 120;
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+drawRectangle(0,0,width,height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>512</x>
+      <y>136</y>
+      <w>97</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>//3amr elkalba :)
+primaryKey
+bg=gray</panel_attributes>
+    <additional_attributes/>
+    <custom_code>	if (!changed) {
+		width = 120;
+		height = 40;
+		changed = true;
+	}
+drawEllipse(width/2, height/2,width/2, height/2);
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+int twidth = 0;
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+	twidth = textWidth(textline);
+}
+y += 5;
+drawLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>520</x>
+      <y>40</y>
+      <w>97</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>//3amr elkalba :)
+MultiValued
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+    <custom_code>	if (!changed) {
+		width = 120;
+		height = 40;
+		changed = true;
+	}
+drawEllipse(width/2, height/2,width/2, height/2);
+drawEllipse(width/2, height/2,width/2 - 5, height/2 - 5);
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+int twidth = 0;
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+	twidth = textWidth(textline);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>280</x>
+      <y>216</y>
+      <w>97</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>weakRelation
+bg=pink</panel_attributes>
+    <additional_attributes/>
+    <custom_code>	if (!changed) {
+		width = 120;
+		height = 120;
+		changed = true;
+	}
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+Polygon p = new Polygon();
+p.addPoint(width/2,0);
+p.addPoint(width, height/2);
+p.addPoint(width/2, height);
+p.addPoint(0, height/2);
+drawPolygon(p);
+Polygon p2 = new Polygon();
+p2.addPoint(width/2 ,5);
+p2.addPoint(width - 5, height/2 );
+p2.addPoint(width/2 , height - 5);
+p2.addPoint(5, height/2 );
+drawPolygon(p2);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>392</x>
+      <y>256</y>
+      <w>97</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>//3amr elkalba :)
+W.E-Key
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+    <custom_code>	if (!changed) {
+		width = 120;
+		height = 40;
+		changed = true;
+	}
+drawEllipse(width/2, height/2,width/2, height/2);
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+int twidth = 0;
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+	twidth = textWidth(textline);
+}
+y += 5;
+DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
+  </element>
+</diagram>

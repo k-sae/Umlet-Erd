@@ -14,27 +14,11 @@ public class <!CLASSNAME!> extends CustomElement {
 	
 	@Override
 	public void paint() {
-		Vector<String> textlines = Utils.decomposeStrings(this.getPanelAttributes());
+		Vector<String> textlines = getAttributes();
 		/****CUSTOM_CODE START****/
-//Modify the code below to define the element's behavior.
-//
-//Example:  Change the line
-//  y += printCenter(textline,y);
-//to
-//  y += 2*printCenter(textline,y);
-//and observe the element preview.
 
-int y=textHeight();
-	if (!changed) {
-		width = 100;
-		height = 50;
-		changed = true;
-	}
-drawRectangle(0,0,width,height);
-
-for(String textline : textlines) {
-	y += printCenter(textline,y);
-}
+    drawRectangle(0,0,width,height);
+    printInTheMiddle(textlines);
 		/****CUSTOM_CODE END****/
 	}
 	void DrawDashedLine(int x1, int y1, int x2, int y2){
@@ -61,4 +45,42 @@ for(String textline : textlines) {
      {
          return  x1 + ((y3 - y1) * (x2-x1) / (y2-y1));
      }
+      void printInTheMiddle(Vector<String> strings){
+        int y=(height/2 - textHeight() + 5) * 1 * 1/2;
+        for (String s: strings
+             ) {
+            if(!s.startsWith("width=") && !s.startsWith("height="))
+            {
+                y += y + textHeight();
+                printCenter(s,y);
+            }
+        }
+       
+     }
+     Vector<String> getAttributes(){
+      boolean widthFound = false;
+      boolean heightFound = false;
+      Vector<String> textlines = Utils.decomposeStrings(this.getPanelAttributes());
+          for (String s: textlines)
+            {
+              if(s.startsWith("width="))
+              {
+                  width=Integer.parseInt(s.substring("width=".length()));
+                  widthFound = true;
+              }
+              else if (s.startsWith("height="))
+              {
+                  height=Integer.parseInt(s.substring("height=".length()));
+                  heightFound = true;
+              }
+            }
+    // if (!widthFound) {
+    //   finalstr +="width="+width+ Constants.NEWLINE;
+    // }
+    // if (!heightFound) {
+    //   finalstr +="height="+height+ Constants.NEWLINE;
+    // }
+            // setPanelAttributes(textlines);
+      return textlines;
+  }
 }

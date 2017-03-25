@@ -177,6 +177,26 @@ m2=1
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
+      <x>280</x>
+      <y>40</y>
+      <w>97</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes>Entity
+bg=blue</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+drawRectangle(0,0,width,height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
       <x>288</x>
       <y>112</y>
       <w>81</w>
@@ -187,9 +207,7 @@ m2=1
 Relation
 bg=green</panel_attributes>
     <additional_attributes/>
-    <custom_code>height = 100;
-width = 100;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+    <custom_code>int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
 
 for(String textline : textlines) {
 	y += y + textHeight();
@@ -206,51 +224,6 @@ drawPolygon(p);</custom_code>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>400</x>
-      <y>40</y>
-      <w>97</w>
-      <h>41</h>
-    </coordinates>
-    <panel_attributes>Weak Entity
-bg=orange</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 50;
-width = 120;
-drawRectangle(0,0,width,height);
-drawRectangle(5,5,width - 10,height -10);
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-</custom_code>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>280</x>
-      <y>40</y>
-      <w>97</w>
-      <h>41</h>
-    </coordinates>
-    <panel_attributes>Entity
-bg=blue</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 50;
-width = 120;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-drawRectangle(0,0,width,height);</custom_code>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
       <x>512</x>
       <y>136</y>
       <w>97</w>
@@ -260,11 +233,7 @@ drawRectangle(0,0,width,height);</custom_code>
 primaryKey
 bg=gray</panel_attributes>
     <additional_attributes/>
-    <custom_code>	if (!changed) {
-		width = 120;
-		height = 40;
-		changed = true;
-	}
+    <custom_code>
 drawEllipse(width/2, height/2,width/2, height/2);
 int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
 int twidth = 0;
@@ -288,11 +257,7 @@ drawLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
 MultiValued
 bg=cyan</panel_attributes>
     <additional_attributes/>
-    <custom_code>	if (!changed) {
-		width = 120;
-		height = 40;
-		changed = true;
-	}
+    <custom_code>
 drawEllipse(width/2, height/2,width/2, height/2);
 drawEllipse(width/2, height/2,width/2 - 5, height/2 - 5);
 int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
@@ -306,6 +271,28 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
+      <x>400</x>
+      <y>40</y>
+      <w>97</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes>Weak Entity
+bg=orange</panel_attributes>
+    <additional_attributes/>
+    <custom_code>
+drawRectangle(0,0,width,height);
+drawRectangle(5,5,width - 10,height -10);
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
       <x>280</x>
       <y>216</y>
       <w>97</w>
@@ -314,11 +301,7 @@ for(String textline : textlines) {
     <panel_attributes>weakRelation
 bg=pink</panel_attributes>
     <additional_attributes/>
-    <custom_code>	if (!changed) {
-		width = 120;
-		height = 120;
-		changed = true;
-	}
+    <custom_code>
 int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
 
 for(String textline : textlines) {
@@ -351,12 +334,7 @@ drawPolygon(p2);</custom_code>
 W.E-Key
 bg=yellow</panel_attributes>
     <additional_attributes/>
-    <custom_code>	if (!changed) {
-		width = 120;
-		height = 40;
-		changed = true;
-	}
-drawEllipse(width/2, height/2,width/2, height/2);
+    <custom_code>drawEllipse(width/2, height/2,width/2, height/2);
 int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
 int twidth = 0;
 for(String textline : textlines) {

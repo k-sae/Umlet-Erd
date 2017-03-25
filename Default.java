@@ -22,9 +22,6 @@ public class <!CLASSNAME!> extends CustomElement {
 		/****CUSTOM_CODE END****/
 	}
 	void DrawDashedLine(int x1, int y1, int x2, int y2){
-        Graphics graphics = getGraphics();
-        graphics.setColor(Color.black);
-
         int dashLength = 5;
         int loopend =(int) Math.sqrt((x1 - x2) * (x1 - x2) + (y2 - y1) * (y2 - y1));
           if (y1 == y2)
@@ -32,14 +29,15 @@ public class <!CLASSNAME!> extends CustomElement {
             for (int i = x1; i < x2; i+=10) {
                 drawLine(i,y1, i+5,y2);
             }
-            return;
         }
+        else{
         for (int x = 0, j = y1; x < loopend/dashLength  ;x++, j+= dashLength * (y2-y1)/Math.abs(y2-y1))
         {
             int i = getX3(x1,y1,x2,y2,j);
             if (x%2 == 1)
             drawLine(i,j,getX3(x1,y1,x2,y2,j +dashLength)  , j + dashLength);
         }
+      }
     }
      int getX3(int x1, int y1, int x2, int y2, int y3)
      {
@@ -74,13 +72,6 @@ public class <!CLASSNAME!> extends CustomElement {
                   heightFound = true;
               }
             }
-    // if (!widthFound) {
-    //   finalstr +="width="+width+ Constants.NEWLINE;
-    // }
-    // if (!heightFound) {
-    //   finalstr +="height="+height+ Constants.NEWLINE;
-    // }
-            // setPanelAttributes(textlines);
       return textlines;
   }
 }

@@ -3,7 +3,7 @@
 Umlet-erd  contains The essential tools to create erd diagram
 its integrated with Umlet (http://www.umlet.com/)
 you should download Umlet first before adding this tool from this link 'http://www.umlet.com/changes.htm'
-instalation steps
+### installation steps:
 
 ```
 1-navigate to the installation directory
